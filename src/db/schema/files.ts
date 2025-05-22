@@ -3,22 +3,22 @@ import { sql } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const exampleSchema = sqliteTable(
-  "example",
+export const files = sqliteTable(
+  "files",
   {
     id: integer("id").primaryKey({ autoIncrement: true }),
     name: text("name").notNull(),
-    passwordHash: text("password_hash"),
+    blobUrl: text("blob_url"),
     createdAt: integer("created_at", { mode: "timestamp" })
       .notNull()
       .default(sql`(unixepoch('now'))`),
   },
   (table) => {
-    return [index("idx_example_id").on(table.id)];
+    return [index("idx_files_id").on(table.id)];
   },
 );
 
-export const exampleSelectSchema = createSelectSchema(exampleSchema);
-export const exampleInsertSchema = createInsertSchema(exampleSchema);
+export const filesSelectSchema = createSelectSchema(files);
+export const filesInsertSchema = createInsertSchema(files);
 
-export type ExampleInsertType = z.infer<typeof exampleInsertSchema>;
+export type FilesInsertType = z.infer<typeof filesInsertSchema>;
