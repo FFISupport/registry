@@ -23,7 +23,7 @@
   --color-ctp-sky: #89dceb;
   --color-ctp-teal: #94e2d5;
   --color-ctp-green: #a6e3a1;
-  --color-ctp-tellow: #f9e2af;
+  --color-ctp-yellow: #f9e2af;
   --color-ctp-peach: #fab387;
   --color-ctp-maroon: #eba0ac;
   --color-ctp-red: #f38ba8;
@@ -31,4 +31,33 @@
   --color-ctp-pink: #f5c2e7;
   --color-ctp-flamingo: #f2cdcd;
   --color-ctp-rosewater: #f5e0dc;
+}
+
+@theme {
+  --color-ctp-l-crust: #dce0e8;
+  --color-ctp-l-mantle: #e6e9ef;
+  --color-ctp-l-base: #eff1f5;
+  --color-ctp-l-surface-0: #ccd0da;
+  --color-ctp-l-surface-1: #bcc0cc;
+  --color-ctp-l-surface-2: #acb0be;
+  --color-ctp-l-overlay-0: #9ca0b0;
+  --color-ctp-l-overlay-1: #8c8fa1;
+  --color-ctp-l-overlay-2: #7c7f93;
+  --color-ctp-l-subtext-0: #6c6f85;
+  --color-ctp-l-subtext-1: #5c5f77;
+  --color-ctp-l-text: #4c4f69;
+  --color-ctp-l-lavender: #7287fd;
+  --color-ctp-l-blue: #1e66f5;
+  --color-ctp-l-sapphire: #209fb5;
+  --color-ctp-l-sky: #04a5e5;
+  --color-ctp-l-teal: #179299;
+  --color-ctp-l-green: #40a02b;
+  --color-ctp-l-yellow: #df8e1d;
+  --color-ctp-l-peach: #fe640b;
+  --color-ctp-l-maroon: #e64553;
+  --color-ctp-l-red: #d20f39;
+  --color-ctp-l-mauve: #8839ef;
+  --color-ctp-l-pink: #ea76cb;
+  --color-ctp-l-flamingo: #dd7878;
+  --color-ctp-l-rosewater: #dc8a78;
 }

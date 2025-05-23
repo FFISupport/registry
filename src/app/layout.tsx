@@ -21,7 +21,7 @@ const RootLayout: FC<LayoutProps> = ({ children }) => {
       <title>Create Syl's App</title>
     </head>
     <body
-      className={`${lexend.className} bg-ctp-base text-ctp-text font-light antialiased`}
+      className={`${lexend.className} bg-ctp-base dark:text-ctp-text text-ctp-l-text font-light antialiased`}
     >
     <QueryClientProvider client={reactQuery}>
       {children}

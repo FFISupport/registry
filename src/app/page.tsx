@@ -4,7 +4,7 @@ import { WiggleWiggle } from "@/components/WiggleWiggle";
 
 const IndexPage = () => {
   return (
-    <div className="bg-ctp-base flex min-h-screen flex-col items-center justify-center gap-8">
+    <div className="dark:bg-ctp-base bg-ctp-l-base flex min-h-screen flex-col items-center justify-center gap-8">
       <WiggleWiggle>
         <img
           src="/assets/icon.png"
@@ -13,31 +13,31 @@ const IndexPage = () => {
         />
       </WiggleWiggle>
       <p>
-        <strong className="text-2xl font-bold text-ctp-mauve">
+        <strong className="text-2xl font-bold dark:text-ctp-mauve text-ctp-l-mauve">
           Welcome to your app!
         </strong>
       </p>
       <p>
         This app was bootstrapped with{" "}
-        <code className="text-ctp-green">create-syl-app</code>.
+        <code className="dark:text-ctp-green text-ctp-l-green">create-syl-app</code>.
       </p>
       <p>
-        Edit <code className="text-ctp-green">src/app/layout.tsx</code> or{" "}
-        <code className="text-ctp-green">src/app/page.tsx</code> to see your
+        Edit <code className="dark:text-ctp-green text-ctp-l-green">src/app/layout.tsx</code> or{" "}
+        <code className="dark:text-ctp-green text-ctp-l-green">src/app/page.tsx</code> to see your
         changes!
       </p>
       <p>
         For more information about adding routes and data handling, refer to
         both the{" "}
         <AnimatedUnderlineLink
-          className="text-ctp-blue transition"
+          className="dark:text-ctp-blue text-ctp-l-blue transition"
           href="https://nextjs.org/"
         >
           Next.js
         </AnimatedUnderlineLink>{" "}
         and{" "}
         <AnimatedUnderlineLink
-          className="text-ctp-blue transition"
+          className="dark:text-ctp-blue text-ctp-l-blue transition"
           href="https://tanstack.com/query"
         >
           TanStack Query
@@ -48,7 +48,7 @@ const IndexPage = () => {
         <p>
           The boostrap includes{" "}
           <AnimatedUnderlineLink
-            className="text-ctp-blue transition"
+            className="dark:text-ctp-blue text-ctp-l-blue transition"
             href="https://orm.drizzle.team/"
           >
             Drizzle
@@ -59,7 +59,7 @@ const IndexPage = () => {
         <p>
           A{" "}
           <AnimatedUnderlineLink
-            className="text-ctp-blue transition"
+            className="dark:text-ctp-blue text-ctp-l-blue transition"
             href="https://turso.tech/"
           >
             Turso
@@ -73,7 +73,7 @@ const IndexPage = () => {
         For more information about what's included in the bootstrap, please see
         the repository{" "}
         <AnimatedUnderlineLink
-          className="text-ctp-blue transition"
+          className="dark:text-ctp-blue text-ctp-l-blue transition"
           href="https://github.com/NekoDrone/create-syl-app"
         >
           README
@@ -84,7 +84,7 @@ const IndexPage = () => {
       <p>
         Built with 💜 by{" "}
         <AnimatedUnderlineLink
-          className="text-ctp-blue transition"
+          className="dark:text-ctp-blue text-ctp-l-blue transition"
           href="https://sylfr.dev"
         >
           Serenity

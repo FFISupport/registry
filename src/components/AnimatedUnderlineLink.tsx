@@ -21,7 +21,7 @@ export const AnimatedUnderlineLink: FC<AnimatedLinkProps> = ({
     >
       {children}
       <motion.span
-        className="absolute bottom-1 left-0 w-full h-0.25 bg-ctp-blue origin-center"
+        className="absolute bottom-1 left-0 w-full h-0.25 dark:bg-ctp-blue bg-ctp-l-blue origin-center"
         variants={{
           initial: { scaleX: 0 },
           hover: { scaleX: 1 },
