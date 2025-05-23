@@ -14,7 +14,13 @@ const compat = new FlatCompat({
 });
 
 const ignoreConfig = defineConfig([
-    globalIgnores([".config/*", ".next/*", "drizzle/*", ".idea/*"]),
+    globalIgnores([
+        ".config/*",
+        ".next/*",
+        "drizzle/*",
+        ".idea/*",
+        "*.config.*",
+    ]),
 ]);
 
 const tsEslintConfig = tseslint.config(
