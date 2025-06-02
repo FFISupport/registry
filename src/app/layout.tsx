@@ -18,10 +18,10 @@ const RootLayout: FC<LayoutProps> = ({ children }) => {
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width" />
-                <title>Create Syl&apos;s App</title>
+                <title>Registry</title>
             </head>
             <body
-                className={`${lexend.className} bg-ctp-base dark:text-ctp-text text-ctp-l-text font-light antialiased`}
+                className={`${lexend.className} dark:bg-ctp-base bg-ctp-l-base dark:text-ctp-text text-ctp-l-text font-light antialiased`}
             >
                 <QueryClientProvider client={reactQuery}>
                     {children}
