@@ -8,7 +8,7 @@ export const files = sqliteTable(
     {
         id: integer("id").primaryKey({ autoIncrement: true }),
         name: text("name").notNull(),
-        blobUrl: text("blob_url"),
+        blobUrl: text("blob_url").notNull(),
         createdAt: integer("created_at", { mode: "timestamp" })
             .notNull()
             .default(sql`(unixepoch('now'))`),
