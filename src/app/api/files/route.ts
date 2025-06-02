@@ -1,5 +1,5 @@
 import { StatusType } from "@/utils/types/responses";
-import { newErrorResponse, newSuccessResponse } from "@/utils/server/factory";
+import { newErrorResponse, newSuccessResponse } from "@/utils/server/responses";
 import db from "@/db";
 import {
     filesSelectSchema,
