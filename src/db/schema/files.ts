@@ -19,6 +19,7 @@ export const files = sqliteTable(
 );
 
 export const filesSelectSchema = createSelectSchema(files);
+export const filesSelectSchemaArray = z.array(filesSelectSchema);
 export const filesInsertSchema = createInsertSchema(files);
 
 export type FilesInsertType = z.infer<typeof filesInsertSchema>;
