@@ -4,7 +4,7 @@ import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
 import { uuidv7 } from "uuidv7";
 
-export const files = sqliteTable(
+export const filesTable = sqliteTable(
     "files",
     {
         id: text("id")
@@ -22,8 +22,8 @@ export const files = sqliteTable(
     },
 );
 
-export const filesSelectSchema = createSelectSchema(files);
+export const filesSelectSchema = createSelectSchema(filesTable);
 export const filesSelectSchemaArray = z.array(filesSelectSchema);
-export const filesInsertSchema = createInsertSchema(files);
+export const filesInsertSchema = createInsertSchema(filesTable);
 
 export type FilesInsertType = z.infer<typeof filesInsertSchema>;

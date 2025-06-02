@@ -1,7 +1,7 @@
-import { files } from "@/db/schema/files";
+import { filesTable } from "@/db/schema/files";
 
 export const schema = {
-    files,
+    filesTable,
 };
 
 export * from "@/db/schema/files";
