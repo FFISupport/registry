@@ -1,14 +1,13 @@
 "use client";
 
 import type { ClientFile } from "@/utils/types/client";
-import type { FC } from "react";
 import { LucideEyeOpen } from "@/components/Icons/LucideEye";
 
 interface ItemProps {
     file: ClientFile;
 }
 
-export const FileItem: FC<ItemProps> = ({ file }) => {
+export const FileItem = ({ file }: ItemProps) => {
     return (
         <div className="flex flex-col items-center gap-2">
             <div className="flex items-center gap-2">
