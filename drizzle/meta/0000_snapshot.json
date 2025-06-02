@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "a2a5c400-87c6-40ef-9189-3bdaff2afd8c",
+  "id": "ed3f979d-b3ee-4243-830b-185de9d422cf",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "files": {
@@ -9,10 +9,10 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": true,
           "notNull": true,
-          "autoincrement": true
+          "autoincrement": false
         },
         "name": {
           "name": "name",
@@ -21,11 +21,11 @@
           "notNull": true,
           "autoincrement": false
         },
-        "blob_url": {
-          "name": "blob_url",
+        "blob_key": {
+          "name": "blob_key",
           "type": "text",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "autoincrement": false
         },
         "created_at": {

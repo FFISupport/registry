@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1747920288981,
-      "tag": "0000_aspiring_big_bertha",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1748841494641,
-      "tag": "0001_redundant_phil_sheldon",
+      "when": 1748848781512,
+      "tag": "0000_overrated_guardsmen",
       "breakpoints": true
     }
   ]

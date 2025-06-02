@@ -1,7 +1,7 @@
 CREATE TABLE `files` (
-	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`id` text PRIMARY KEY NOT NULL,
 	`name` text NOT NULL,
-	`blob_url` text,
+	`blob_key` text NOT NULL,
 	`created_at` integer DEFAULT (unixepoch('now')) NOT NULL
 );
 --> statement-breakpoint
