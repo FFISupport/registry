@@ -1,6 +1,9 @@
 import type { ApiError } from "@/utils/types/errors";
 import type { z } from "zod";
-import type { filesSelectSchemaArray } from "@/db/schema/files";
+import type {
+    filesSelectSchema,
+    filesSelectSchemaArray,
+} from "@/db/schema/files";
 
 interface ApiResponse {
     status: StatusType;
@@ -25,4 +28,6 @@ export enum StatusType {
     ERROR = "error",
 }
 
-export type FilesResponse = z.infer<typeof filesSelectSchemaArray>;
+export type FilesResponse =
+    | z.infer<typeof filesSelectSchemaArray>
+    | z.infer<typeof filesSelectSchema>;
