@@ -21,13 +21,13 @@ export interface ErrorResponse extends ApiResponse {
     error: ApiError;
 }
 
-export type ResponseData = FilesResponse;
+export type ResponseData = FilesResponse | FileResponse;
 
 export enum StatusType {
     SUCCESS = "success",
     ERROR = "error",
 }
 
-export type FilesResponse =
-    | z.infer<typeof filesSelectSchemaArray>
-    | z.infer<typeof filesSelectSchema>;
+export type FilesResponse = z.infer<typeof filesSelectSchemaArray>;
+
+export type FileResponse = z.infer<typeof filesSelectSchema>;
