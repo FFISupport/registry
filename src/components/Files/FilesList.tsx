@@ -1,20 +1,18 @@
 "use client";
 
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import type { FilesResponse, SuccessResponse } from "@/utils/types/responses";
 import { Loading } from "@/components/Icons/Loading";
 import type { ClientFile } from "@/utils/types/client";
 import { FileItem } from "@/components/Files/FileItem";
 
 export const FilesList = () => {
-    const queryClient = useQueryClient();
-
     const getFiles = async () => {
         const req = new Request("/api/files", {
             method: "GET",
         });
         const { data } = (await (await fetch(req)).json()) as SuccessResponse;
-        return data;
+        return data as FilesResponse;
     };
 
     const { data: files, isPending } = useQuery({
