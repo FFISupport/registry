@@ -2,13 +2,17 @@ import { index, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
+import { uuidv7 } from "uuidv7";
 
 export const files = sqliteTable(
     "files",
     {
-        id: integer("id").primaryKey({ autoIncrement: true }),
+        id: text("id")
+            .primaryKey()
+            .notNull()
+            .$defaultFn(() => uuidv7()),
         name: text("name").notNull(),
-        blobUrl: text("blob_url").notNull(),
+        blobKey: text("blob_key").notNull(),
         createdAt: integer("created_at", { mode: "timestamp" })
             .notNull()
             .default(sql`(unixepoch('now'))`),
