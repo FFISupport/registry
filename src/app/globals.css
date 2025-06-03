@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "uploadthing/tw/v4";
 
 /* Uncomment if the Tailwind Catppuccin plugin hasn't been updated to support Tailwind v4. */
 /* These are the defaults for Catppuccin Mocha */
@@ -61,3 +62,5 @@
   --color-ctp-l-flamingo: #dd7878;
   --color-ctp-l-rosewater: #dc8a78;
 }
+
+@source "../../node_modules/@uploadthing/react/dist"; /** <-- depends on your project structure */

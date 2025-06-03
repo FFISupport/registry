@@ -1,5 +1,12 @@
+"use client";
+
 import { motion } from "motion/react";
 import type { Dispatch } from "react";
+import {
+    generateUploadButton,
+    generateUploadDropzone,
+} from "@uploadthing/react";
+import type { AppFileRouter } from "@/utils/server/upload";
 
 interface ModalProps {
     setShowModal: Dispatch<boolean>;
@@ -27,8 +34,16 @@ export const UploadModal = ({ setShowModal }: ModalProps) => {
                 exit={{ opacity: 0 }}
                 transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
             >
-                <p>Upload!</p>
+                <UTUploadDropzone endpoint="pdfUpload" />
+                <UTUploadButton endpoint="pdfUpload" />
             </motion.div>
         </div>
     );
 };
+
+export const UTUploadButton = generateUploadButton<AppFileRouter>({
+    url: "/api/upload",
+});
+export const UTUploadDropzone = generateUploadDropzone<AppFileRouter>({
+    url: "/api/upload",
+});
