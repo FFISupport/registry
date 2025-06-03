@@ -1,4 +1,5 @@
 import { FFILogo } from "@/components/Icons/FFILogo";
+import { ProfileButton } from "@/components/Profile/ProfileButton";
 
 export const NavBar = () => {
     return (
@@ -10,7 +11,7 @@ export const NavBar = () => {
                 </div>
             </a>
 
-            <p>Hi</p>
+            <ProfileButton />
         </div>
     );
 };
