@@ -7,6 +7,7 @@ import {
     generateUploadDropzone,
 } from "@uploadthing/react";
 import type { AppFileRouter } from "@/utils/server/upload";
+import { useQueryClient } from "@tanstack/react-query";
 
 interface ModalProps {
     setShowModal: Dispatch<boolean>;
@@ -15,6 +16,15 @@ interface ModalProps {
 export const UploadModal = ({ setShowModal }: ModalProps) => {
     const handleBackdropClose = () => {
         setShowModal(false);
+    };
+
+    const queryClient = useQueryClient();
+
+    const handleClientUploadComplete = async () => {
+        handleBackdropClose();
+        await queryClient.invalidateQueries({
+            queryKey: ["files"],
+        });
     };
 
     return (
@@ -34,8 +44,10 @@ export const UploadModal = ({ setShowModal }: ModalProps) => {
                 exit={{ opacity: 0 }}
                 transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
             >
-                <UTUploadDropzone endpoint="pdfUpload" />
-                <UTUploadButton endpoint="pdfUpload" />
+                <UTUploadDropzone
+                    endpoint="pdfUpload"
+                    onClientUploadComplete={handleClientUploadComplete}
+                />
             </motion.div>
         </div>
     );

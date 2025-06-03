@@ -26,7 +26,7 @@ export const FilesList = () => {
                 <Loading />
             ) : (
                 files?.map((file: ClientFile) => {
-                    return <FileItem file={file} key={file.name} />;
+                    return <FileItem file={file} key={file.id} />;
                 })
             )}
         </div>
