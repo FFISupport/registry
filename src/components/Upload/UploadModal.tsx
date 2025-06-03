@@ -1,7 +1,34 @@
-export const UploadModal = () => {
+import { motion } from "motion/react";
+import type { Dispatch } from "react";
+
+interface ModalProps {
+    setShowModal: Dispatch<boolean>;
+}
+
+export const UploadModal = ({ setShowModal }: ModalProps) => {
+    const handleBackdropClose = () => {
+        setShowModal(false);
+    };
+
     return (
-        <div className="fixed inset-0 z-50 flex min-h-screen items-center justify-center bg-black/30 backdrop-blur-sm">
-            Hi!
+        <div className="fixed inset-0 z-50 flex min-h-screen items-center justify-center">
+            <motion.div
+                className="fixed inset-0 bg-black/30 backdrop-blur-sm"
+                onClick={handleBackdropClose}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+            />
+            <motion.div
+                className="z-10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+            >
+                <p>Upload!</p>
+            </motion.div>
         </div>
     );
 };
