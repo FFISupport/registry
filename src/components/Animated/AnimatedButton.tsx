@@ -6,6 +6,12 @@ export interface AnimButtonProps {
     className?: string;
 }
 
+/**
+ * Reusable animated button component. Use this in place of a normal <button> div whenever you need to apply default animations to it.
+ * @param children - Provide it within markup. DO NOT pass this as an inline prop. This component should wrap other components to create the button.
+ * @param className - CSS class name(s) in string
+ */
+
 export const AnimatedButton = ({ children, className }: AnimButtonProps) => {
     return (
         <motion.button
