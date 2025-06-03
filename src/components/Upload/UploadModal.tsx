@@ -47,15 +47,13 @@ export const UploadModal = ({ setShowModal }: ModalProps) => {
                 <UTUploadDropzone
                     endpoint="pdfUpload"
                     onClientUploadComplete={handleClientUploadComplete}
+                    className="dark:bg-ctp-base bg-ctp-l-base ut-button:dark:bg-ctp-sky ut-button:dark:text-ctp-crust ut-label:dark:text-ctp-text ut-allowed-content:dark:text-ctp-subtext-0 dark:outline-ctp-sky ut-button:bg-ctp-l-sky ut-button:text-ctp-l-crust ut-label:text-ctp-l-text ut-allowed-content:text-ctp-l-subtext-0 outline-ctp-l-sky ut-upload-icon:text-ctp-l-sky ut-upload-icon:dark:text-ctp-sky outline-2 outline-dashed"
                 />
             </motion.div>
         </div>
     );
 };
 
-export const UTUploadButton = generateUploadButton<AppFileRouter>({
-    url: "/api/upload",
-});
 export const UTUploadDropzone = generateUploadDropzone<AppFileRouter>({
     url: "/api/upload",
 });
