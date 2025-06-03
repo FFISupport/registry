@@ -1,5 +1,6 @@
 import { FFILogo } from "@/components/Icons/FFILogo";
 import { ProfileButton } from "@/components/Profile/ProfileButton";
+import { UploadNavButton } from "@/components/Upload/UploadNavButton";
 
 export const NavBar = () => {
     return (
@@ -10,8 +11,10 @@ export const NavBar = () => {
                     <h1 className="text-lg font-semibold">Registry</h1>
                 </div>
             </a>
-
-            <ProfileButton />
+            <div className="flex items-center gap-4">
+                <UploadNavButton />
+                <ProfileButton />
+            </div>
         </div>
     );
 };
