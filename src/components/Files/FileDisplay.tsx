@@ -24,7 +24,7 @@ export const FileDisplay = ({ blobKey }: DisplayProps) => {
     });
 
     return (
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 pt-6">
             {isPending ? (
                 <Loading />
             ) : (
