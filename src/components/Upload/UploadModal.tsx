@@ -2,10 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Dispatch } from "react";
-import {
-    generateUploadButton,
-    generateUploadDropzone,
-} from "@uploadthing/react";
+import { generateUploadDropzone } from "@uploadthing/react";
 import type { AppFileRouter } from "@/utils/server/upload";
 import { useQueryClient } from "@tanstack/react-query";
 
